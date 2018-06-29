@@ -35,7 +35,7 @@ class Genre
         #     artist_collection << song.artist if !artist_collection.include?(song.artist)
         # end
         # artist_collection
-        @songs.collect{|s| s.artist.name}.uniq
+        @songs.collect{|s| s.artist}.uniq
     end
 
 end
