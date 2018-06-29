@@ -39,13 +39,7 @@ class Song
     end
 
     def self.find_by_name(name)
-        match = nil
-        self.all.each{|song|
-        if song.name == name
-            match = song
-        end}
-        match
-        self.all.detect{|s| s.name == name}
+        self.all.detect{|song| song.name == name}
     end
 
     def self.find_or_create_by_name(name)
