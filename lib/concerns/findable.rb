@@ -6,9 +6,7 @@ module Concerns
 
         def find_or_create_by_name(name)
             item = find_by_name(name)
-            if !item
-                item = self.create(name)
-            end
+            item = self.create(name) if !item
             item
         end
     end
